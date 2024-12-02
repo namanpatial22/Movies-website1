@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= movie.title %> - Details</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="details-container">
+        <div class="movie-header">
+            <h1><%= movie.title %></h1>
+            <p><strong>Director:</strong> <%= movie.director || "Not Available" %></p>
+            <p><strong>Description:</strong> <%= movie.description || "No description available" %></p>
+            <p><strong>Year of Release:</strong> <%= movie.year %></p>
+            <p><strong>Date Added:</strong> <%= new Date(movie.added_on).toDateString() %></p>
+            <p><strong>Added By:</strong> <%= movie.added_by %></p>
+            <a href="/" class="back-button">Back to Homepage</a>
+        </div>
+
+        <div class="reviews-section">
+            <h2>Reviews</h2>
+            <ul class="reviews-list">
+                <% reviews.forEach(review => { %>
+                    <li>
+                        <p><strong>Rating:</strong> <%= review.rating %> / 5</p>
+                        <p><strong>Review:</strong> <%= review.review %></p>
+                        <p><strong>By:</strong> on <%= new Date(review.created_at).toDateString() %></p>
+                    </li>
+                <% }) %>
+            </ul>
+            <% if (isLoggedIn) { %>
+                <div class="add-review">
+                    <h3>Add Your Review</h3>
+                    <form action="/movie/<%= movie.id %>/review" method="POST">
+                        <label for="rating">Rating (out of 5):</label>
+                        <input type="range" id="rating" name="rating" min="1" max="5" required />
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" required></textarea>
+                        <button type="submit" class="submit-button">Submit Review</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">Movie Reviews</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/add-movie">Add Movie</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Movie Reviews</h1>
+        <p>Discover and review your favorite movies.</p>
+        <a href="/add-movie" class="cta-button">Add Your Movie</a>
+    </section>
+
+    <!-- Movies Grid -->
+    <section class="movies">
+        <h2>All Movies</h2>
+        <div class="movie-grid">
+            <% movies.forEach(movie => { %>
+                <div class="movie-card">
+                    <img src="<%= movie.poster || '/uploads/default.jpg' %>" alt="<%= movie.title %> Poster" class="movie-poster">
+                    <h3><%= movie.title %></h3>
+                    <p>Year: <%= movie.year %></p>
+                    <a href="/movie/<%= movie.id %>" class="details-button">Details</a>
+                </div>
+                
+            <% }) %>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Movie Reviews. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+/* General Reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: white;
+    color: #2575fc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d4e3ff;
+}
+
+/* Movies Section */
+.movies {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.movies h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    margin: 10px 0;
+}
+
+.details-button {
+    text-decoration: none;
+    background-color: #6a11cb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.details-button:hover {
+    background-color: #2575fc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+
+
+
+/* Add Movie Page Styling */
+.add-movie-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #090909;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.form-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.movie-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="range"] {
+    width: calc(100% - 50px);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="file"] {
+    padding: 3px;
+}
+
+button.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a11cb;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.submit-button:hover {
+    background-color: #2575fc;
+}
+
+
+
+
+/* Login Page Styling */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.login-header p {
+    font-size: 1rem;
+    color: #d4e3ff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: white;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #d4e3ff;
+}
+
+button.login-button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #d4e3ff;
+    color: #2575fc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.login-button:hover {
+    background-color: #a8c6f7;
+}
+
+
+/* Details Page Styling */
+.details-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.movie-header p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.movie-description {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    color: #444;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.reviews-section {
+    margin-top: 30px;
+}
+
+.reviews-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reviews-list li {
+    margin: 10px 0;
+    padding: 15px;
+    background: #e9f5ff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-list li p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.add-review h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.add-review form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea, input[type="range"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea:focus, input[type="range"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-button {
+    padding: 10px;
+    font-size: 1rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background: #218838;
+}
+
+
+.add-movie-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #121212, #090909);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.movie-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.movie-form input,
+.movie-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.movie-form textarea {
+    resize: none;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background: #6a11cb;
+    color: #060606;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-button:hover {
+    background: #2575fc;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    background-color: #f9f6f6; /* Light blue background */
+    color: #0b0b0b; /* Darker text color */
+    border: 1px solid #0073e6; /* Blue border */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    outline: none;
+}
+
+  
+
+
+  
+label {
+      font-weight: bold;
+      color: #6a11cb; /* Match the theme color for labels */
+      display: block;
+      margin-bottom: 5px;
+  }
+  
+
+button {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green for hover effect */
+}
+
+
